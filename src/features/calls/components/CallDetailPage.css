@@ -1,0 +1,25 @@
+.rhap_container {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.rhap_main-controls-button,
+.rhap_volume-button,
+.rhap_repeat-button {
+  color: var(--cui-primary) !important;
+}
+
+.rhap_progress-indicator,
+.rhap_volume-indicator {
+  background: var(--cui-primary) !important;
+}
+
+.rhap_progress-filled {
+  background-color: var(--cui-tertiary-bg) !important;
+}
+
+.rhap_time,
+.rhap_total-time {
+  color: var(--cui-body-color) !important; 
+}

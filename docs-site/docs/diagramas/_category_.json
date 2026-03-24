@@ -1,0 +1,8 @@
+{
+  "label": "Diagramas",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Visualizaciones técnicas del proyecto que representan flujos, estructuras, clases y estados del sistema, facilitando la comprensión del funcionamiento interno y la arquitectura de reporteria-admin."
+  }
+}

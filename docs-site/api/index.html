@@ -1,0 +1,179 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>reporteria-admin - v0.0.0</title><meta name="description" content="Documentation for reporteria-admin"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">reporteria-admin - v0.0.0</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>reporteria-admin - v0.0.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="multipago-reporte-2025-📊" class="tsd-anchor-link">Multipago Reporte 2025 📊<a href="#multipago-reporte-2025-📊" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><blockquote>
+<p>Front-end empresarial construido con <strong>React 19</strong>, <strong>Vite</strong> y <strong>TypeScript estricto</strong></p>
+</blockquote>
+<hr>
+<h2 id="🛠-stack-tecnológico" class="tsd-anchor-link">🛠 Stack Tecnológico<a href="#🛠-stack-tecnológico" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><table>
+<thead>
+<tr>
+<th>Tecnología</th>
+<th>Versión</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>React</strong></td>
+<td>19.x</td>
+<td>Framework UI</td>
+</tr>
+<tr>
+<td><strong>Vite</strong></td>
+<td>5.x</td>
+<td>Bundler / Dev Server ultrarrápido</td>
+</tr>
+<tr>
+<td><strong>TypeScript</strong></td>
+<td>5.x</td>
+<td>Tipado estricto</td>
+</tr>
+<tr>
+<td><strong>Redux Toolkit + RTKQ</strong></td>
+<td>Última</td>
+<td>State management</td>
+</tr>
+<tr>
+<td><strong>CoreUI</strong></td>
+<td>5.x</td>
+<td>Sistema de componentes</td>
+</tr>
+<tr>
+<td><strong>ESLint + Prettier</strong></td>
+<td>Últimas</td>
+<td>Linting &amp; format</td>
+</tr>
+<tr>
+<td><strong>TypeDoc + Docusaurus</strong></td>
+<td>0.25 / 3.x</td>
+<td>Documentación automática</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="🏗️-arquitectura" class="tsd-anchor-link">🏗️ Arquitectura<a href="#🏗️-arquitectura" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="1-feature-based" class="tsd-anchor-link">1. Feature-based<a href="#1-feature-based" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Cada módulo de negocio vive en <code>/src/features/&lt;feature&gt;</code> e incluye <strong>componentes, hooks, slices, servicios y tipos</strong> propios.<br>
+Facilita trabajo en paralelo, escalabilidad y pruebas aisladas.</p>
+<h3 id="2-atomic-design" class="tsd-anchor-link">2. Atomic Design<a href="#2-atomic-design" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Ejemplos</th>
+<th>Ubicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Átomos</strong></td>
+<td>Button, Input, Icon</td>
+<td><code>components/atoms/</code></td>
+</tr>
+<tr>
+<td><strong>Moléculas</strong></td>
+<td>FieldInput, SearchBar</td>
+<td><code>components/molecules/</code></td>
+</tr>
+<tr>
+<td><strong>Organismos</strong></td>
+<td>DataTable, LoginCard</td>
+<td><code>components/organisms/</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-patrones-y-principios" class="tsd-anchor-link">3. Patrones y principios<a href="#3-patrones-y-principios" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>Container / Presentational</strong>, <strong>Facade</strong>, <strong>Singleton</strong></li>
+<li><strong>SOLID</strong>, <strong>DRY</strong>, <strong>KISS</strong></li>
+<li>TypeScript estricto (<code>noUncheckedIndexedAccess</code>, <code>strictNullChecks</code>, etc.)</li>
+<li>ESLint + Prettier integrados en CI</li>
+</ul>
+<hr>
+<h2 id="🌳-estructura-de-carpetas" class="tsd-anchor-link">🌳 Estructura de carpetas<a href="#🌳-estructura-de-carpetas" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="plaintext">src/
+│
+├── features/         # Cada módulo/feature es auto-contenido (auth, dashboard, transactions, etc)
+│   ├── {feature}/
+│   │   ├── components/atoms/        # Átomos: los componentes más pequeños y reutilizables (botón, input, label)
+│   │   ├── components/molecules/    # Moléculas: combinaciones de átomos que forman una unidad funcional simple (form-group, search-bar)
+│   │   ├── components/organisms/    # Organismos: conjuntos complejos, combinando moléculas y/o átomos (formularios completos, tablas, cards grandes)
+│   │   ├── hooks/                   # Custom hooks relacionados únicamente a esta feature
+│   │   ├── pages/                   # Páginas de alto nivel de la feature (rutas completas)
+│   │   ├── services/                # Servicios/API calls específicos de la feature
+│   │   ├── slices/                  # Slices/reducers de Redux o Zustand propios de la feature
+│   │   ├── types/                   # Tipos/typescript propios de la feature
+│   │   └── ...otros submódulos
+│   └── ...otros módulos/features
+│
+├── shared/
+│   ├── components/atoms/            # Átomos reutilizables globales (botones, inputs, tooltips, íconos, spinners)
+│   ├── components/molecules/        # Moléculas globales (search bar universal, toolbar de tablas, etc)
+│   ├── components/organisms/        # Organismos globales (alertas globales, modal genérico, layouts)
+│   ├── constants/                   # Constantes globales (colores, textos, keys, endpoints base)
+│   ├── hooks/                       # Hooks reutilizables en varias features (useDebounce, usePrevious, etc)
+│   ├── services/                    # Servicios reutilizables globales (ej: auth global, storage util, etc)
+│   ├── types/                       # Tipos/typescript globales
+│   ├── utils/                       # Funciones utilitarias (formateo de fechas, validadores, helpers generales)
+│
+├── layouts/                         # Componentes de layout generales (Sidebar, Header, Footer, Wrapper)
+├── routes/                          # Definición central de rutas y PrivateRoute logic
+├── assets/                          # Imágenes, fuentes, estilos globales
+├── App.js (o App.tsx)               # Root Component (puente entre router, store, y layout principal)
+└── main.js (o main.tsx)             # Entry Point de React (donde se monta la app en el DOM)
+
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<h2 id="🚀-inicio-rápido" class="tsd-anchor-link">🚀 Inicio rápido<a href="#🚀-inicio-rápido" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h1 id="1-instalar-dependencias" class="tsd-anchor-link">1. Instalar dependencias<a href="#1-instalar-dependencias" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="plaintext">npm install
+</code><button type="button">Copy</button></pre>
+
+<h1 id="2-entorno-de-desarrollo" class="tsd-anchor-link">2. Entorno de desarrollo<a href="#2-entorno-de-desarrollo" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="plaintext">npm run dev       # http://localhost:5173
+</code><button type="button">Copy</button></pre>
+
+<h1 id="3-build-producción" class="tsd-anchor-link">3. Build producción<a href="#3-build-producción" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="plaintext">npm run build
+npm run preview   # Servir el build
+</code><button type="button">Copy</button></pre>
+
+<h2 id="documentación-automática" class="tsd-anchor-link">Documentación automática<a href="#documentación-automática" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>El portal de docs se genera con TypeDoc + Docusaurus y vive en docs-site/.</p>
+<h1 id="entrar-a-la-carpeta-de" class="tsd-anchor-link">Entrar a la carpeta de:<a href="#entrar-a-la-carpeta-de" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="plaintext">cd docs-site/
+</code><button type="button">Copy</button></pre>
+
+<h1 id="instalar--las-dependencias-correspondientess" class="tsd-anchor-link">Instalar  las dependencias correspondientess<a href="#instalar--las-dependencias-correspondientess" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="plaintext">npm install
+</code><button type="button">Copy</button></pre>
+
+<h1 id="1-generar-la-api-typedoc-→-markdown" class="tsd-anchor-link">1. Generar la API (TypeDoc → Markdown)<a href="#1-generar-la-api-typedoc-→-markdown" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="plaintext">npm run docs:api       # dentro de docs-site/
+</code><button type="button">Copy</button></pre>
+
+<h1 id="2-levantar-el-sitio-docusaurus" class="tsd-anchor-link">2. Levantar el sitio (Docusaurus)<a href="#2-levantar-el-sitio-docusaurus" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><pre><code class="plaintext">npm run docs:dev       # http://localhost:3000
+</code><button type="button">Copy</button></pre>
+
+<p>Estructura resultante:</p>
+<pre><code class="plaintext">docs-site/
+├─ docs/           # Guías en MD/MDX
+├─ api/            # Markdown generado por TypeDoc
+└─ build/          # Sitio estático listo para desplegar
+</code><button type="button">Copy</button></pre>
+
+<h2 id="enlaces-oficiales" class="tsd-anchor-link">Enlaces oficiales<a href="#enlaces-oficiales" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li><a href="https://typedoc.org/">TypeDoc 🔗</a></li>
+<li><a href="https://docusaurus.io/">Docusaurus 🔗</a></li>
+</ul>
+<h2 id="🔐-variables-de-entorno" class="tsd-anchor-link">🔐 Variables de entorno<a href="#🔐-variables-de-entorno" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Uso de archivos .env en Vite (React 19)
+Vite carga primero los archivos de entorno específicos según el modo en que corres el proyecto.</p>
+<p>Si ejecutas npm run dev o vite, el modo es development y se cargará .env.development si existe.</p>
+<p>Si ejecutas npm run build, el modo es production y se cargará .env.production si existe.</p>
+<p>Si no existe un archivo específico para el modo, se usará el archivo .env por defecto.</p>
+<p>Orden de prioridad para variables de entorno:</p>
+<pre><code class="plaintext">.env.[mode].local (más específico)
+
+.env.[mode]
+
+.env.local
+
+.env (más general)
+</code><button type="button">Copy</button></pre>
+
+<p>Recomendación:</p>
+<p>Usa .env.development para variables de desarrollo.</p>
+<p>Usa .env.production para producción.</p>
+<p>Usa .env para valores comunes a todos los entornos.</p>
+<p>Ejemplo:
+Si tienes ambos archivos .env y .env.development, al correr npm run dev se usará lo que está en .env.development.</p>
+<pre><code class="plaintext">cp .env.development .env
+</code><button type="button">Copy</button></pre>
+
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#multipago-reporte-2025-📊"><span>Multipago <wbr/>Reporte 2025 📊</span></a><ul><li><a href="#🛠-stack-tecnológico"><span>🛠 <wbr/>Stack <wbr/>Tecnológico</span></a></li><li><a href="#🏗️-arquitectura"><span>🏗️ <wbr/>Arquitectura</span></a></li><li><ul><li><a href="#1-feature-based"><span>1. <wbr/>Feature-<wbr/>based</span></a></li><li><a href="#2-atomic-design"><span>2. <wbr/>Atomic <wbr/>Design</span></a></li><li><a href="#3-patrones-y-principios"><span>3. <wbr/>Patrones y principios</span></a></li></ul></li><li><a href="#🌳-estructura-de-carpetas"><span>🌳 <wbr/>Estructura de carpetas</span></a></li><li><a href="#🚀-inicio-rápido"><span>🚀 <wbr/>Inicio rápido</span></a></li></ul><a href="#1-instalar-dependencias"><span>1. <wbr/>Instalar dependencias</span></a><a href="#2-entorno-de-desarrollo"><span>2. <wbr/>Entorno de desarrollo</span></a><a href="#3-build-producción"><span>3. <wbr/>Build producción</span></a><ul><li><a href="#documentación-automática"><span>Documentación automática</span></a></li></ul><a href="#entrar-a-la-carpeta-de"><span>Entrar a la carpeta de:</span></a><a href="#instalar--las-dependencias-correspondientess"><span>Instalar  las dependencias correspondientess</span></a><a href="#1-generar-la-api-typedoc-→-markdown"><span>1. <wbr/>Generar la <wbr/>API (<wbr/>Type<wbr/>Doc → <wbr/>Markdown)</span></a><a href="#2-levantar-el-sitio-docusaurus"><span>2. <wbr/>Levantar el sitio (<wbr/>Docusaurus)</span></a><ul><li><a href="#enlaces-oficiales"><span>Enlaces oficiales</span></a></li><li><a href="#🔐-variables-de-entorno"><span>🔐 <wbr/>Variables de entorno</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">reporteria-admin - v0.0.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

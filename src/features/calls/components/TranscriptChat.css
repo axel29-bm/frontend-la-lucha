@@ -1,0 +1,30 @@
+.transcript-container {
+    overflow: auto;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    clear: both;
+    white-space: pre-wrap;
+  }
+  
+  .agent {
+    background-color: #e1f5fe;
+    color: #0277bd;
+    float: left;
+    text-align: left;
+  }
+  
+  .user {
+    background-color: #ffe0b2;
+    color: #e65100;
+    float: right;
+    text-align: right;
+  }
+  

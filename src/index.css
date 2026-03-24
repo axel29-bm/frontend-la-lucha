@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Ajusta el ancho aquí si cambias el tamaño del sidebar */
+:root {
+  --sidebar-width: 256px;
+
+  /* La Lucha brand palette */
+  --lucha-black: #1a1a1a;
+  --lucha-red: #c8102e;
+  --lucha-white: #f5f5f5;
+  --lucha-gray: #2e2e2e;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.custom-table-head th {
+  background-color: #ccc !important;  /* El gris que prefieras */
+}
+
+.table {
+  min-width: 1200px;
+}
+
+/* th, td {
+  white-space: nowrap;
+} */
+
+.border-table-content {
+  border: 1px solid #e5e7eb; 
+  border-radius: 6px;
+  /* border: '1px solid #e5e7eb', borderRadius: 8 */
+}
+
+@media (min-width: 992px) {
+  .sidebar-open {
+    margin-left: var(--sidebar-width);
+    transition: margin-left 0.2s;
+  }
+  .sidebar-closed {
+    margin-left: 0 !important;
+    transition: margin-left 0.2s;
+  }
+}
+
+/* =========================================================
+   LA LUCHA — Login Branding
+   ========================================================= */
+
+.lucha-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lucha-black);
+  padding: 2rem 1rem;
+}
+
+.lucha-login-card {
+  background-color: var(--lucha-gray) !important;
+  border: 1px solid var(--lucha-red) !important;
+  border-top: 4px solid var(--lucha-red) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 8px 32px rgba(200, 16, 46, 0.25) !important;
+  color: var(--lucha-white) !important;
+}
+
+.lucha-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.lucha-logo {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+}
+
+.lucha-welcome {
+  color: var(--lucha-white);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  opacity: 0.85;
+}
+
+.lucha-field-error {
+  display: block;
+  color: var(--lucha-red);
+  font-size: 0.8rem;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.lucha-auth-error {
+  color: var(--lucha-red);
+  background: rgba(200, 16, 46, 0.1);
+  border: 1px solid var(--lucha-red);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.lucha-btn-submit {
+  background-color: var(--lucha-red) !important;
+  border-color: var(--lucha-red) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  padding: 0.5rem 2rem !important;
+  transition: background-color 0.2s, box-shadow 0.2s !important;
+}
+
+.lucha-btn-submit:hover:not(:disabled) {
+  background-color: #a50d26 !important;
+  border-color: #a50d26 !important;
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.4) !important;
+}
+
+.lucha-btn-submit:disabled {
+  opacity: 0.65 !important;
+}
+
+/* Override CoreUI input group inside lucha card */
+.lucha-login-card .input-group-text {
+  background-color: var(--lucha-black) !important;
+  border-color: #555 !important;
+  color: var(--lucha-red) !important;
+}
+
+.lucha-login-card .form-control {
+  background-color: var(--lucha-black) !important;
+  border-color: #555 !important;
+  color: var(--lucha-white) !important;
+}
+
+.lucha-login-card .form-control::placeholder {
+  color: #888 !important;
+}
+
+.lucha-login-card .form-control:focus {
+  border-color: var(--lucha-red) !important;
+  box-shadow: 0 0 0 0.2rem rgba(200, 16, 46, 0.25) !important;
+}
+
+/* =========================================================
+   LA LUCHA — Dashboard
+   ========================================================= */
+
+.lucha-dashboard-banner {
+  border-top: 3px solid var(--lucha-red) !important;
+  background-color: var(--lucha-black) !important;
+  color: var(--lucha-white) !important;
+  border-radius: 6px !important;
+}
+
+.lucha-dashboard-title {
+  color: var(--lucha-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.lucha-dashboard-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.lucha-section-heading {
+  color: var(--lucha-red);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.lucha-quick-card {
+  border: 1px solid rgba(200, 16, 46, 0.15) !important;
+  border-left: 3px solid var(--lucha-red) !important;
+  transition: box-shadow 0.2s !important;
+  border-radius: 6px !important;
+}
+
+.lucha-quick-card:hover {
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.15) !important;
+}
+
+.lucha-quick-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(200, 16, 46, 0.1);
+  flex-shrink: 0;
+}
+
+.lucha-quick-icon {
+  color: var(--lucha-red) !important;
+}
+
+.lucha-quick-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.lucha-quick-desc {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+
+/* =========================================================
+   LA LUCHA — User Management
+   ========================================================= */
+
+/* Header card */
+.lucha-users-header {
+  background-color: var(--lucha-black) !important;
+  border-top: 3px solid var(--lucha-red) !important;
+  border-radius: 6px !important;
+}
+
+.lucha-users-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--lucha-red);
+  flex-shrink: 0;
+}
+
+.lucha-users-title {
+  color: var(--lucha-white);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.lucha-users-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+}
+
+/* Search bar */
+.lucha-search-icon {
+  background-color: rgba(200, 16, 46, 0.08) !important;
+  border-color: rgba(200, 16, 46, 0.3) !important;
+  color: var(--lucha-red) !important;
+}
+
+.lucha-search-input:focus {
+  border-color: var(--lucha-red) !important;
+  box-shadow: 0 0 0 0.2rem rgba(200, 16, 46, 0.15) !important;
+}
+
+/* Stat chips */
+.lucha-stat-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.lucha-stat-chip--active {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: rgba(34, 197, 94, 0.06);
+}
+
+.lucha-stat-chip--inactive {
+  border-color: rgba(200, 16, 46, 0.3);
+  background: rgba(200, 16, 46, 0.04);
+}
+
+.lucha-stat-num {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--lucha-black);
+}
+
+.lucha-stat-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Table card */
+.lucha-users-table-card {
+  border-radius: 6px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+}
+
+/* Table head */
+.lucha-users-thead th {
+  background-color: var(--lucha-black) !important;
+  color: var(--lucha-white) !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  border-bottom: 2px solid var(--lucha-red) !important;
+  padding: 12px 14px !important;
+}
+
+/* Table rows */
+.lucha-users-table td {
+  padding: 10px 14px !important;
+  vertical-align: middle !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.lucha-users-row:hover {
+  background-color: rgba(200, 16, 46, 0.03) !important;
+}
+
+/* Avatar */
+.lucha-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--lucha-red), #8b0000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.lucha-avatar--lg {
+  width: 64px;
+  height: 64px;
+  font-size: 1.3rem;
+}
+
+.lucha-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lucha-user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.lucha-user-username {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+/* Badges */
+.lucha-badge-role {
+  background-color: rgba(200, 16, 46, 0.12) !important;
+  color: var(--lucha-red) !important;
+  border: 1px solid rgba(200, 16, 46, 0.25) !important;
+  font-weight: 600 !important;
+  font-size: 0.72rem !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+}
+
+.lucha-badge-active {
+  background-color: rgba(34, 197, 94, 0.12) !important;
+  color: #16a34a !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  font-weight: 600 !important;
+  font-size: 0.72rem !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+}
+
+.lucha-badge-inactive {
+  background-color: rgba(200, 16, 46, 0.1) !important;
+  color: var(--lucha-red) !important;
+  border: 1px solid rgba(200, 16, 46, 0.25) !important;
+  font-weight: 600 !important;
+  font-size: 0.72rem !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+}
+
+/* Action buttons */
+.lucha-action-btn {
+  width: 30px;
+  height: 30px;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px !important;
+  border: none !important;
+  transition: background 0.15s !important;
+}
+
+.lucha-action-btn--view {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+}
+.lucha-action-btn--view:hover {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+.lucha-action-btn--edit {
+  background-color: rgba(234, 179, 8, 0.1) !important;
+  color: #ca8a04 !important;
+}
+.lucha-action-btn--edit:hover {
+  background-color: rgba(234, 179, 8, 0.2) !important;
+}
+
+.lucha-action-btn--delete {
+  background-color: rgba(200, 16, 46, 0.08) !important;
+  color: var(--lucha-red) !important;
+}
+.lucha-action-btn--delete:hover {
+  background-color: rgba(200, 16, 46, 0.18) !important;
+}
+
+/* Empty state */
+.lucha-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #aaa;
+}
+
+.lucha-empty-icon {
+  color: rgba(200, 16, 46, 0.25) !important;
+}
+
+/* Pagination */
+.lucha-page-active a,
+.lucha-page-active button {
+  background-color: var(--lucha-red) !important;
+  border-color: var(--lucha-red) !important;
+  color: #fff !important;
+}
+
+/* Modal */
+.lucha-modal-header {
+  border-bottom: 2px solid var(--lucha-red) !important;
+  background-color: var(--lucha-black) !important;
+}
+
+.lucha-modal-title {
+  color: var(--lucha-white) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+.lucha-modal-footer {
+  border-top: 1px solid rgba(200, 16, 46, 0.15) !important;
+}
+
+/* Modal detail fields */
+.lucha-detail-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  background: rgba(200, 16, 46, 0.04);
+  border: 1px solid rgba(200, 16, 46, 0.1);
+}
+
+.lucha-detail-icon {
+  color: var(--lucha-red) !important;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.lucha-detail-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.lucha-detail-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Delete confirm icon */
+.lucha-delete-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(200, 16, 46, 0.1);
+  color: var(--lucha-red) !important;
+}
+
+/* Buttons */
+.lucha-btn-outline {
+  background: transparent !important;
+  border: 2px solid var(--lucha-red) !important;
+  color: var(--lucha-red) !important;
+  font-weight: 600 !important;
+  padding: 0.45rem 1.25rem !important;
+  border-radius: 4px !important;
+  transition: background 0.15s !important;
+}
+
+.lucha-btn-outline:hover:not(:disabled) {
+  background: rgba(200, 16, 46, 0.08) !important;
+}
+
+.lucha-btn-danger {
+  background-color: var(--lucha-red) !important;
+  border-color: var(--lucha-red) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  padding: 0.45rem 1.25rem !important;
+  border-radius: 4px !important;
+  transition: background 0.2s !important;
+}
+
+.lucha-btn-danger:hover:not(:disabled) {
+  background-color: #a50d26 !important;
+}
+
+/* Form inputs inside modals and forms */
+.lucha-form-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.lucha-form-input:focus {
+  border-color: var(--lucha-red) !important;
+  box-shadow: 0 0 0 0.2rem rgba(200, 16, 46, 0.15) !important;
+}
+
+/* Success card */
+.lucha-success-card {
+  border-top: 4px solid var(--lucha-red) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 16px rgba(200, 16, 46, 0.12) !important;
+}
+
+.lucha-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #16a34a !important;
+}

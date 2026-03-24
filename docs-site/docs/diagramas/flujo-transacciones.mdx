@@ -1,0 +1,170 @@
+---
+title: Flujo de Transacciones
+description: Diagrama de flujo de procesos de la feature Transacciones.
+---
+
+# 🔄 Diagrama de Flujos
+
+<br />
+<br />
+
+# 1.- Flujo Secuencial Simple (graph TD)
+
+Este es un flujo de pasos lineales que describe el proceso principal para consultar transacciones. Es útil para mostrar la secuencia directa de eventos sin condiciones.
+
+```mermaid
+graph TD
+  A[Usuario ingresa al sistema] --> B[Solicita token JWT]
+  B --> C[Login exitoso]
+  C --> D[Petición a API de transacciones]
+  D --> E[Backend valida token]
+  E --> F[Consulta BD]
+  F --> G[Devuelve datos al frontend]
+  G --> H[Tabla de resultados]
+```
+
+<br />
+<br />
+
+# 2.- Flujo Condicional (flowchart TD con decisiones)
+
+Este es un diagrama de flujo de decisión. A diferencia del anterior, este incluye condiciones lógicas, ideal para mostrar cómo se maneja el flujo ante errores o validaciones.
+
+```mermaid
+flowchart TD
+  A[Inicio] --> B{¿Usuario tiene token válido?}
+  B -- Sí --> C[Obtener datos de usuario]
+  C --> D{¿Tiene permisos para ver transacciones?}
+  D -- Sí --> E[Realiza solicitud a la API]
+  E --> F[Backend valida token]
+  F --> G{¿Token sigue vigente?}
+  G -- Sí --> H[Consulta base de datos]
+  H --> I[Muestra transacciones en la tabla]
+
+  B -- No --> Z[Redirigir a login]
+  D -- No --> Y[Mostrar error de permisos]
+  G -- No --> X[Solicitar nuevo token o cerrar sesión]
+```
+
+<br />
+<br />
+
+# 3.- Diagrama de Clases (classDiagram)
+
+Este es un diagrama de clases orientado a objetos. Muestra la estructura de clases, atributos y métodos, y las relaciones entre ellas.
+
+```mermaid
+classDiagram
+  class Usuario {
+    +String nombre
+    +String email
+    +login()
+  }
+
+  class Transaccion {
+    +Date fecha
+    +Number monto
+    +validar()
+  }
+
+  Usuario --> Transaccion : realiza
+```
+
+<br />
+<br />
+
+# 4.- Diagrama de Secuencia
+
+Representa el intercambio de mensajes entre entidades a lo largo del tiempo.
+
+```mermaid
+sequenceDiagram
+  participant Usuario
+  participant Frontend
+  participant API
+  participant BD
+
+  Usuario->>Frontend: Inicia sesión
+  Frontend->>API: Solicita token
+  API-->>Frontend: Token JWT
+  Frontend->>API: Petición de transacciones
+  API->>BD: Consulta transacciones
+  BD-->>API: Datos
+  API-->>Frontend: Lista de transacciones
+  Frontend-->>Usuario: Muestra tabla
+```
+
+<br />
+<br />
+
+# 5.- Diagrama de Casos de Uso (graph LR + estilo de actores)**
+
+No existe un tipo `usecaseDiagram` en Mermaid, pero se puede simular con `graph LR` y etiquetas.
+
+```mermaid
+graph LR
+  actor(Usuario) --> login[Iniciar sesión]
+  actor --> ver[Ver transacciones]
+  actor --> exportar[Exportar a Excel]
+  actor --> cerrar[Cerrar sesión]
+```
+
+<br />
+<br />
+
+# 6.- Diagrama de Gantt (gantt)**
+
+Ideal para mostrar cronogramas o planificación por tareas.
+
+```mermaid
+gantt
+  title Cronograma de desarrollo
+  dateFormat  YYYY-MM-DD
+  section Autenticación
+  Diseño login     :a1, 2025-06-01, 3d
+  Lógica de token  :after a1, 4d
+  section Transacciones
+  Listado frontend :2025-06-10, 5d
+  Validación backend: 2d
+  Exportaciones     : 2d
+```
+
+<br />
+<br />
+
+# 7.- Diagrama de Estado (stateDiagram-v2)**
+
+Representa los estados por los que pasa un sistema, útil para máquinas de estado o validaciones.
+
+```mermaid
+stateDiagram-v2
+  [*] --> Inicio
+  Inicio --> Autenticado : login válido
+  Autenticado --> Consultando : hace petición
+  Consultando --> Mostrando : recibe respuesta
+  Mostrando --> [*]
+  Inicio --> [*] : token inválido
+```
+
+<br />
+<br />
+
+# 8.- Diagrama de Entidad-Relación (erDiagram)**
+
+Ideal para documentar esquemas de base de datos.
+
+```mermaid
+erDiagram
+  USERS ||--o{ TRANSACTIONS : realiza
+  USERS {
+    int id
+    string nombre
+    string email
+  }
+  TRANSACTIONS {
+    int id
+    date fecha
+    float monto
+    int user_id
+  }
+```

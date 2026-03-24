@@ -1,0 +1,51 @@
+.custom-button {
+  background-color: #8fa7bd;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+  
+.custom-button:hover {
+  background-color: #6f8aa3;
+}
+
+.btn-gradient-primary {
+  background-color: #2c55c4;
+  color: #ffffff;
+}
+
+.btn-gradient-primary:hover {
+  background-color: #5c4e89;
+  color: #ffffff;
+}
+
+/* En CampaignListPage.css 
+
+.btn-gradient-primary {
+  background-image: linear-gradient(to right, #321fdb 0%, #1f6ecf 51%, #321fdb 100%);
+  background-size: 200% auto;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+*/
+
+
+/*
+.btn-gradient-primary:hover {
+  background-position: right center;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+*/
+
+.btn-gradient-primary .me-2 {
+    transition: transform 0.3s ease;
+}
+
+.btn-gradient-primary:hover .me-2 {
+    transform: rotate(90deg); /* Anima el icono de "+" al pasar el mouse */
+}
