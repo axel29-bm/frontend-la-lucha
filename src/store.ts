@@ -3,18 +3,16 @@ import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import authReducer from './features/auth/slices/authSlice'
 import sidebarReducer from './layouts/slices/sidebarSlice'
-import usersReducer from './features/create-users/slices/userSlice';
 
 const rootReducer = combineReducers({
   auth: authReducer,
   sidebar: sidebarReducer,
-  users: usersReducer,
 })
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['auth'], 
+  whitelist: ['auth'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

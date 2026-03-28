@@ -7,11 +7,9 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import {
-  cilBullhorn,
-  cilEnvelopeClosed,
-  cilGroup,
-  cilPhone,
-  cilUserPlus,
+  cilDollar,
+  cilInstitution,
+  cilPeople,
 } from '@coreui/icons'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -27,52 +25,38 @@ const Dashboard: React.FC = () => {
 
   const quickLinks = [
     {
-      label: 'Llamadas',
-      icon: cilPhone,
-      to: '/calls',
-      description: 'Historial y gestión de llamadas',
+      label: 'Bancos',
+      icon: cilInstitution,
+      to: '/banks',
+      description: 'Gestión de bancos para pagos',
     },
     {
-      label: 'Campañas',
-      icon: cilBullhorn,
-      to: '/campaign',
-      description: 'Administra tus campañas activas',
+      label: 'Monedas',
+      icon: cilDollar,
+      to: '/currencies',
+      description: 'Monedas registradas en el sistema',
     },
     {
-      label: 'Usuarios',
-      icon: cilGroup,
-      to: '/users-list',
-      description: 'Lista y gestión de usuarios',
-    },
-    {
-      label: 'Registrar usuario',
-      icon: cilUserPlus,
-      to: '/create-users',
-      description: 'Agrega un nuevo usuario al sistema',
-    },
-    {
-      label: 'Correos',
-      icon: cilEnvelopeClosed,
-      to: '/email',
-      description: 'Historial de correos enviados',
+      label: 'Proveedores',
+      icon: cilPeople,
+      to: '/providers',
+      description: 'Gestión de proveedores y cuentas',
     },
   ]
 
   return (
     <>
-      {/* Banner de bienvenida */}
       <CCard className="mb-4 lucha-dashboard-banner">
         <CCardBody className="p-4">
           <h2 className="lucha-dashboard-title mb-1">
             Bienvenido, {displayName}
           </h2>
           <p className="lucha-dashboard-subtitle mb-0">
-            La Lucha Sanguchería Criolla
+            La Lucha Sanguchería Criolla — Sistema de Pagos
           </p>
         </CCardBody>
       </CCard>
 
-      {/* Accesos rápidos */}
       <p className="lucha-section-heading mb-3">Accesos rápidos</p>
       <CRow className="g-3">
         {quickLinks.map((item) => (
